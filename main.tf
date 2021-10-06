@@ -1,6 +1,6 @@
 provider "aci" {
   username = var.aciUsername
-  private_key = var.aciPassword
+  password = var.aciPassword
   insecure = "true"
   url = var.aciUrl
 }
