@@ -41,12 +41,15 @@ module "aci" {
   bdSubnet = "192.168.1.1/24"
 }
 ```
+As this is meant to be called within the TF Cloud K8s Operator,
+you typically invoke this module like so: 
 
+![workspace.yaml](https://github.com/cpaggen/aci_tf_operator_module/TF_cloud_operator_workspace_yml.png?raw=true)
 
 Outputs
 =======
 
-None in this current version
+None in this current version. If your workspace successfully executes your plan, you will see something similar to this: ![plan_ran](https://github.com/cpaggen/aci_tf_operator_module/TF_cloud_operator_runs_ACI_plan.png?raw=true)
 
 
 Authors
