@@ -3,13 +3,14 @@ basic ACI demo terraform module
 
 A PoC-quality Terraform module that creates a minimal tenant on an ACI fabric.
 
-*Attention*: this module is meant to be called by the TF K8s Operator.
+*Attention*: this module is meant to be called by the TF Cloud K8s Operator [link](https://github.com/hashicorp/terraform-k8s).
+
 Because the ACI provider does not accept configuration from env_variables,
 and because standard TF modules never contain provider configuration,
-and because there is way for the TF K8s Operator to pass provider configuration variables, 
+and because there is no way for the TF K8s Operator to pass provider configuration variables, 
 this module somewhat deviates from the norm in the sense that it specifies the provider configuration.
 
-That way, the TF K8s Operator can pass provider configuration variable when calling the module.
+That way, the TF K8s Operator can pass provider configuration variable when calling the module. Be aware that if you flag a variable as *sensitive*, you must then define it into a K8s secret that's read by the operator. You must then base64-decode the stored value for that variable when passing it to a module. That's just how the TF Cloud K8s Operator works, not my rule :)
 
 Module Input Variables
 ----------------------
