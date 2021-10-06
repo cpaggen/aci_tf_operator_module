@@ -1,9 +1,9 @@
 basic ACI demo terraform module
 ===============================
 
-A terraform module to create a minimal tenant on an ACI fabric
+A PoC-quality Terraform module that creates a minimal tenant on an ACI fabric.
 
-This module is meant to be called by the TF K8s Operator.
+*Attention*: this module is meant to be called by the TF K8s Operator.
 Because the ACI provider does not accept configuration from env_variables,
 and because standard TF modules never contain provider configuration,
 and because there is way for the TF K8s Operator to pass provider configuration variables, 
@@ -46,11 +46,10 @@ module "aci" {
 Outputs
 =======
 
- - `name` - does what it says on the tin
- - `environment` - does what it says on the tin
+None in this current version
 
 
 Authors
 =======
 
-name.surname@company.com
+cpaggen@gmail.com
