@@ -31,7 +31,7 @@ Usage
 
 ```hcl
 module "aci" {
-  source = "github.com/my-repo/demo"
+  source = "github.com/cpaggen/aci_tf_operator_module"
   aciUser = "admin"
   aciPassword = "secret"
   aciUrl = "https://10.20.30.40"
