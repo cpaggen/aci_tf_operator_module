@@ -1,4 +1,4 @@
-variable "aciUser" {
+variable "aciUsername" {
   default = ""
 }
 
