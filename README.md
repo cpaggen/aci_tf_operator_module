@@ -3,7 +3,7 @@ basic ACI demo terraform module
 
 A PoC-quality Terraform module that creates a minimal tenant on an ACI fabric.
 
-*Attention*: this module is meant to be called by the TF Cloud K8s Operator [link](https://github.com/hashicorp/terraform-k8s).
+*Attention*: this module is meant to be called by the [TF Cloud K8s Operator](https://github.com/hashicorp/terraform-k8s).
 
 Because the ACI provider does not accept configuration from env_variables,
 and because standard TF modules never contain provider configuration,
